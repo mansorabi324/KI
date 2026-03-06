@@ -366,6 +366,13 @@
               "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": []
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -1556,6 +1563,7 @@
               "Data Flow"
             ],
             "id": "fa9e9cc5-1a47-4799-a81a-42dccd838624",
+            "parent": "b2f633d2-a86a-4bfd-83c2-67402512d324",
             "source": {
               "cell": "b2f633d2-a86a-4bfd-83c2-67402512d324",
               "port": "60c13d68-3f38-4ac1-901f-ef8f3b32ecd1"
@@ -1564,8 +1572,7 @@
               "cell": "b2f633d2-a86a-4bfd-83c2-67402512d324",
               "port": "60c13d68-3f38-4ac1-901f-ef8f3b32ecd1"
             },
-            "vertices": [],
-            "parent": "b2f633d2-a86a-4bfd-83c2-67402512d324"
+            "vertices": []
           },
           {
             "shape": "flow",
@@ -1616,8 +1623,57 @@
               {
                 "x": 310,
                 "y": 410
+              },
+              {
+                "x": 370,
+                "y": 410
               }
-            ]
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
           },
           {
             "shape": "flow",
@@ -1639,7 +1695,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Credentials",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1653,7 +1709,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Data Flow"
+              "Credential"
             ],
             "id": "ef34f81a-cace-4463-9d93-575162bc3115",
             "source": {
@@ -1763,7 +1819,12 @@
               "cell": "d6a09154-37c8-4ba7-b316-e8e840589525",
               "port": "7f63d474-0be5-441d-991b-efe77949036a"
             },
-            "vertices": []
+            "vertices": [
+              {
+                "x": 360,
+                "y": 240
+              }
+            ]
           },
           {
             "shape": "flow",
