@@ -1614,7 +1614,7 @@
             },
             "vertices": [
               {
-                "x": 330,
+                "x": 310,
                 "y": 410
               }
             ]
@@ -1664,10 +1664,57 @@
               "cell": "b2f633d2-a86a-4bfd-83c2-67402512d324",
               "port": "184d4e0a-9205-4d40-825c-98cb28aa7871"
             },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "HTTP Request",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "HTTP Request"
+            ],
+            "id": "74261682-1921-4e49-bc99-1f8b671bbba2",
+            "source": {
+              "cell": "d6a09154-37c8-4ba7-b316-e8e840589525",
+              "port": "7f63d474-0be5-441d-991b-efe77949036a"
+            },
+            "target": {
+              "cell": "e35114c2-f1fb-45fa-81aa-11068ec1d166",
+              "port": "60c13d68-3f38-4ac1-901f-ef8f3b32ecd1"
+            },
             "vertices": [
               {
-                "x": 410,
-                "y": 290
+                "x": 330,
+                "y": 190
               }
             ]
           },
@@ -1691,7 +1738,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "HTTP Response",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1705,54 +1752,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Data Flow"
-            ],
-            "id": "74261682-1921-4e49-bc99-1f8b671bbba2",
-            "source": {
-              "cell": "d6a09154-37c8-4ba7-b316-e8e840589525",
-              "port": "7f63d474-0be5-441d-991b-efe77949036a"
-            },
-            "target": {
-              "cell": "e35114c2-f1fb-45fa-81aa-11068ec1d166",
-              "port": "60c13d68-3f38-4ac1-901f-ef8f3b32ecd1"
-            },
-            "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Data Flow"
+              "HTTP Response"
             ],
             "id": "4e01189b-35b9-4e00-a656-2287a2d260a2",
             "source": {
