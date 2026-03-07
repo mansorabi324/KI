@@ -1011,7 +1011,7 @@
                   "severity": "High",
                   "type": "Tampering",
                   "description": "Attackers modify or manipulate stored data.",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Gunakan enkripsi untuk data yang tersimpan.\nTerapkan pemeriksaan integritas.\nBatasi akses hanya untuk personel yang berwenang.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 6,
@@ -1019,11 +1019,18 @@
                 }
               ],
               "threatFrequency": {
-                "tampering": 1,
+                "tampering": 2,
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -1348,78 +1355,6 @@
               "port": "184d4e0a-9205-4d40-825c-98cb28aa7871"
             },
             "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "HTTP Request",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "b7f85dad-c6b0-4610-a73b-962ac811f76d",
-                  "title": "HTTP Request Manipulation",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Tampering",
-                  "description": "Attackers manipulate HTTP requests",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 2,
-                  "score": ""
-                }
-              ],
-              "trustBoundaryIds": [],
-              "threatFrequency": {
-                "tampering": 1,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "HTTP Request"
-            ],
-            "id": "74261682-1921-4e49-bc99-1f8b671bbba2",
-            "source": {
-              "cell": "d6a09154-37c8-4ba7-b316-e8e840589525",
-              "port": "7f63d474-0be5-441d-991b-efe77949036a"
-            },
-            "target": {
-              "cell": "e35114c2-f1fb-45fa-81aa-11068ec1d166",
-              "port": "60c13d68-3f38-4ac1-901f-ef8f3b32ecd1"
-            },
-            "vertices": [
-              {
-                "x": 330,
-                "y": 190
-              }
-            ]
           },
           {
             "shape": "flow",
@@ -1922,6 +1857,78 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
+              "name": "HTTP Request",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "b7f85dad-c6b0-4610-a73b-962ac811f76d",
+                  "title": "HTTP Request Manipulation",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Attackers manipulate HTTP requests",
+                  "mitigation": "Terapkan validasi input dan encoding output.\nGunakan Web Application Firewall (WAF).\nIkuti praktik pengkodean yang aman.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 2,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "HTTP Request"
+            ],
+            "id": "74261682-1921-4e49-bc99-1f8b671bbba2",
+            "source": {
+              "cell": "d6a09154-37c8-4ba7-b316-e8e840589525",
+              "port": "7f63d474-0be5-441d-991b-efe77949036a"
+            },
+            "target": {
+              "cell": "e35114c2-f1fb-45fa-81aa-11068ec1d166",
+              "port": "60c13d68-3f38-4ac1-901f-ef8f3b32ecd1"
+            },
+            "vertices": [
+              {
+                "x": 330,
+                "y": 190
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
               "name": "HTTP Response",
               "description": "",
               "outOfScope": false,
@@ -1940,29 +1947,16 @@
                   "severity": "Medium",
                   "type": "Tampering",
                   "description": "Attackers manipulate HTTP responses.",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Terapkan validasi input dan encoding output.\nGunakan Web Application Firewall (WAF).\nIkuti praktik pengkodean yang aman.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 3,
-                  "score": ""
-                },
-                {
-                  "id": "36739729-66de-498f-8fda-916787ee26c5",
-                  "title": "New STRIDE threat",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Information disclosure",
-                  "description": "Provide a description for this threat",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": true,
-                  "number": 4,
                   "score": ""
                 }
               ],
               "trustBoundaryIds": [],
               "threatFrequency": {
-                "tampering": 1,
+                "tampering": 2,
                 "informationDisclosure": 0,
                 "denialOfService": 0
               }
@@ -2029,7 +2023,7 @@
                   "severity": "High",
                   "type": "Information disclosure",
                   "description": "Sensitive data is intercepted or exposed during transmission.",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Gunakan enkripsi untuk data dalam transit.\nHindari mengirim data sensitif dalam parameter URL.\nBatasi akses hanya untuk personel yang berwenang.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 5,
@@ -2039,7 +2033,7 @@
               "trustBoundaryIds": [],
               "threatFrequency": {
                 "tampering": 0,
-                "informationDisclosure": 1,
+                "informationDisclosure": 2,
                 "denialOfService": 0
               }
             },
