@@ -1704,53 +1704,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Web Transaction Response",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Web Transaction Response"
-            ],
-            "id": "afff92b7-4036-4449-9e54-ba9546a726a3",
-            "source": {
-              "cell": "3ee75b6b-9ff0-450e-be5b-1aa287fb0bdc",
-              "port": "08025100-8109-4a0e-97f1-cf6792de17de"
-            },
-            "target": {
-              "cell": "f5eb6bd5-5940-4241-988f-a18443f0fe7d",
-              "port": "2f6e3f34-e2f2-4430-8487-e6292577cedf"
-            },
-            "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "DB Transaction Request",
               "description": "",
               "outOfScope": false,
@@ -2007,6 +1960,73 @@
                 "y": 270
               }
             ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Web Transaction Response",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "c148ef93-6e3c-44f6-83cc-89ab05a50b1d",
+                  "title": "Data Exposed",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Sensitive data is intercepted or exposed during transmission.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Web Transaction Response"
+            ],
+            "id": "afff92b7-4036-4449-9e54-ba9546a726a3",
+            "source": {
+              "cell": "3ee75b6b-9ff0-450e-be5b-1aa287fb0bdc",
+              "port": "08025100-8109-4a0e-97f1-cf6792de17de"
+            },
+            "target": {
+              "cell": "f5eb6bd5-5940-4241-988f-a18443f0fe7d",
+              "port": "2f6e3f34-e2f2-4430-8487-e6292577cedf"
+            },
+            "vertices": []
           }
         ],
         "description": "e-bank STRIDE"
@@ -2014,6 +2034,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "Cybersecurity Architect",
-    "threatTop": 4
+    "threatTop": 5
   }
 }
