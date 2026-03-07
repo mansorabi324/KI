@@ -139,7 +139,7 @@
                   "severity": "High",
                   "type": "Spoofing",
                   "description": "Threat actors impersonate legitimate users to gain unauthorized access.",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Gunakan autentikasi multi-faktor (MFA).\nImplementasikan CAPTCHA.\nPerbarui token autentikasi secara berkala.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 1,
@@ -147,9 +147,16 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 1,
+                "spoofing": 2,
                 "repudiation": 0
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -1017,13 +1024,6 @@
                 "informationDisclosure": 0,
                 "denialOfService": 0
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
